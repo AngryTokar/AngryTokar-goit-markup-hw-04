@@ -121,10 +121,13 @@ img {
 
 .top-menu.link,
 .contacts.header.link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   border: none;
+}
+
+.top-menu.current-link{
+	color:var(--navigation)
 }
 
 .list-link:not(:last-child),
@@ -174,6 +177,7 @@ img {
 
 .hero {
   max-width: 1600px;
+	margin: 0 auto;
   padding: 200px 0px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -236,8 +240,11 @@ img {
 
 .benefits-icon-list {
   width: 270px;
+	height: 120px;
   margin-bottom: 30px;
-  padding: 25px 102.34px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   background-color: var(--background-team-color);
   border-radius: var(--style-botton-radius);
 }
@@ -323,6 +330,7 @@ img {
 }
 
 .work-name {
+	margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18em;
   text-align: center;
@@ -333,11 +341,13 @@ img {
 /* Соц сети */
 
 .social.list {
-  width: 206px;
   display: flex;
-  justify-content: space-between;
-  margin-left: 32px;
-  margin-bottom: 30px;
+  justify-content: center;
+	align-items: center;
+}
+
+.social-item:not(:last-child){
+	margin-right: 10px;
 }
 
 .social-button {
@@ -348,15 +358,17 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+	color: var(--fill-icons);
 }
 
 .social-button:hover,
 .social-button:focus {
+	color: var(--background);
   background-color: var(--navigation);
 }
 
 .social-icon {
-  fill: var(--fill-icons);
+  fill: currentColor;
 }
 
 .social-icon:hover,
@@ -388,17 +400,19 @@ img {
   border: 1px solid var(--fill-icons);
   border-radius: var(--style-botton-radius);
   height: 92px;
+	color: var(--fill-icons);
 }
 
 .company-logo:hover,
 .company-logo:focus {
+	color: var(--navigation);
   border-color: var(--navigation);
 }
 
 .logo-icon {
   width: 106px;
   height: 60px;
-  fill: var(--fill-icons);
+  fill:currentColor;
 }
 
 .logo-icon:hover,
@@ -494,13 +508,19 @@ img {
   border: none;
 }
 
+.galery-button.active-btn{
+	color: var(--background);
+  background-color: var(--navigation);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .galery-button:hover,
 .galery-button:focus {
   color: var(--background);
   background-color: var(--navigation);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .projeckt-list {
